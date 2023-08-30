@@ -10,7 +10,9 @@ function Navbar()  {
       <Link href="">About</Link>
       <Link href="">Profile</Link>
       <Link href="">Contact</Link>
-      <Link href="">projects</Link>
+      <Link href="">Projects</Link>
+      <Link href="/signup">Sign Up</Link>
+
       <div class="animation start-home"></div>
     </nav>
   );
