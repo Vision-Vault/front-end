@@ -10,8 +10,9 @@ export default function Home() {
     <>
     <Hhead data='start page'/>
     <Header/>
-
+    
     <PostPage/>
+
       <Footer />
     </>
   );
