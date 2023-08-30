@@ -3,7 +3,16 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #dedcdc;
+
+    background: linear-gradient(
+      to right,
+    rgba(41, 84, 202, 0.308),
+    rgba(127, 163, 211, 0.041),
+    rgba(60, 162, 175, 0.151),
+        rgba(255, 255, 255, 0.329),
+            rgba(24, 98, 117, 0.062)
+
+  );
   /* display: flex;
       justify-content: center;
     align-items: center;
@@ -138,4 +147,139 @@ nav a:nth-child(5) {
 nav a:nth-child(5):hover ~ .animation {
   width: 120px;
   left: 470px;
+
 }
+
+/* category */
+.category img{
+  width: 250px;
+  height: 200px;
+  /* text-align: center; */
+}
+.category h1{
+  color:rgb(28, 66, 64);
+  font-size: 22px;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  /* text-align: center; */
+
+
+}
+.category {
+  text-align: center;
+  display: inline-block;
+  margin: 30px;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.301);
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+/*
+.category::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 4%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.356), transparent);
+  animation: lightPass s linear infinite;
+
+@keyframes lightPass {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.category:hover::before {
+  animation: none;
+} */
+
+
+.category:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+.allcat{
+  margin-top: -250px;
+}
+/* category */
+
+.infolist{
+  width:300px;
+}
+.homeinfo{
+  margin-top: 200px;
+  margin-left: 100px;
+}
+
+.homeinfo h1{
+  /* margin-top: 80px; */
+  /* padding-top: 60px; */
+margin-bottom: 60px;
+  font-family:Cochin, Georgia, Times, 'Times New Roman', serif;
+
+color: rgb(12, 13, 17);
+}
+
+.infolist ul {
+  list-style-type: none;
+  padding: 0;
+  /* margin-top: 70px; */
+}
+
+.infolist li {
+  margin-bottom: 10px;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.438);
+
+}
+.homeinfo img{
+  margin-left: 48%;
+  margin-top:-700px;
+  display: inline-block;
+}
+
+
+.toprated {
+  width: 800px;
+  height: 700px;
+  text-align: center;
+  display: inline-block;
+  margin-left: 300px; /* lowercase 'px' */
+
+  background-color: rgba(226, 211, 211, 0.534);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.toprated::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width:100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent,
+  rgba(255, 255, 255, 0.356), transparent);
+  animation: lightPass 4s linear infinite;
+
+@keyframes lightPass {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.toprated:hover::before {
+  animation: none;
+}}

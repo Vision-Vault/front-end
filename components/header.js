@@ -1,4 +1,4 @@
- import styles from "../styles/style.css";
+import styles from "../styles/style.css";
 import Navbar from "./navvbar";
 
 
