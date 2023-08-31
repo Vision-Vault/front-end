@@ -1,39 +1,84 @@
-import  '../../styles/signup_page_style.css';
+'use client';
+import React, { useState } from 'react';
+import '../../styles/signup_page_style.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faKey, faLock, faEnvelope, faUser } from '@fortawesome/free-solid-svg-icons'
+
 
 const Signup = () => {
+  const [state, setState] = useState({
+    username: '',
+    email: '',
+    password: '',
+    confirm_password: '',
+
+  });
+
+  const handleChange = event => {
+    setState({ ...state, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    console.log(state);
+  };
+
+  /** 
+  const handleSubmit = async event => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch('YOUR_BACKEND_API_ENDPOINT', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(state),
+      });
+
+      if (response.ok) {
+        // Request successful
+        const data = await response.json();
+        console.log('Response data:', data);
+
+        // Redirect to the login page
+        window.location.href = '/login'; // Replace '/login' with the actual login page URL
+      } else {
+        // Request failed
+        console.error('Request failed with status:', response.status);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  */
+
   return (
-    <div class="mainContainer">
-      <div class="signup-form">
-        <div class="container">
-          <div class="signUp-header">
+    <div className="mainContainer"> 
+      <div className="signup-form">
+        <div className="container">
+          <div className="signUp-header">
             <h1>Create an Account</h1>
-            <p class="signUp-p">Get started for free!</p>
+            <p className="signUp-p">Get started for free!</p>
           </div>
-          <form>
-            <div class="signUp-input">
-              <i class="fa-solid fa-user"></i>
-              <input type="text" placeholder="Username" />
+          <form onSubmit={handleSubmit}> 
+            <div className="signUp-input">
+              <i className="fa-solid"><FontAwesomeIcon icon={faUser} /></i>
+              <input name="username" type="text" placeholder="Username" onChange={handleChange}/>
             </div>
-            <div class="signUp-input">
-              <i class="fa-solid fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+            <div className="signUp-input">
+              <i className="fa-solid"><FontAwesomeIcon icon={faEnvelope} /></i>
+              <input name="email" type="email" placeholder="Email" onChange={handleChange} />
             </div>
-            <div class="signUp-input">
-              <i class="fa-solid fa-lock"></i>
-              <input type="password" placeholder="Password" />
+            <div className="signUp-input">
+              <i className="fa-solid"><FontAwesomeIcon icon={faLock} /></i>
+              <input name="password" type="password" placeholder="Password" onChange={handleChange} />
             </div>
-            <div class="signUp-input">
-              <i class="fa-solid fa-lock"></i>
-              <input type="confirm password" placeholder="Confirm Password" />
+            <div className="signUp-input">
+              <i className="fa-solid"><FontAwesomeIcon icon={faKey} /></i>
+              <input name="confirm_password" type="password" placeholder="Confirm Password" onChange={handleChange}/>
             </div>
-            <input class="signup-btn" type="submit" value="SIGN UP" />
+            <input className="signup-btn" type="submit" value="SIGN UP" />
           </form>
-          <div class="social-icons">
-            <i class="fa-brands fa-facebook-f"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-google"></i>
-          </div>
-          <p class="signUp-p">Already have an account <a class="signUp-link" href="#">sign in</a></p>
         </div>
       </div>
     </div>
