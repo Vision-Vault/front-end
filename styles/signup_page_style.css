@@ -109,3 +109,11 @@ i.fa-google {
   color: #6366f1;
   text-decoration: none;
 }
+
+.password-match {
+  border: 1px solid green !important;
+}
+
+.password-mismatch {
+  border: 1px solid red !important;
+}
