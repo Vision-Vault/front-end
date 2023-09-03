@@ -20,7 +20,9 @@ function CategoryPosts({ categoryId }) {
 export default CategoryPosts;
 
 export async function getServerSideProps(context) {
-  const { categoryId } = context.query;
+  // const { categoryId } = context.query;
+  const router = useRouter();
+  const {categoryId} = router.query;
 
   return {
     props: {

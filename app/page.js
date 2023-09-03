@@ -11,13 +11,19 @@ import Toprated from '@/components/toprated';
 export default function Home() {
   return (
     <>
-    <Hhead data='start page'/>
-    <Header/>
- <AllCategories/>
-<Homeinfo/>
-<Toprated/>
-    {/* <PostPage/> */}
+    <div className='bodyd'>
+
+
+      <Hhead data="start page" />
+      <Header />
+
+
+      {/* <AllCategories /> */}
+      <Homeinfo />
+      <Toprated />
+      {/* <PostPage/> */}
       <Footer />
+      </div>
     </>
   );
 }
