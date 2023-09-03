@@ -1,7 +1,8 @@
 'use client'
 import React, { useState } from "react";
+
 import styles from "../styles/style.css";
-import 'font-awesome/css/font-awesome.min.css'; // Import Font Awesome styles
+import "font-awesome/css/font-awesome.min.css"; // Import Font Awesome styles
 
 export default function Homeinfo() {
   const [showNewDiv, setShowNewDiv] = useState(false);
@@ -58,7 +59,7 @@ export default function Homeinfo() {
         Create Project <br />
         <i
           className="fa fa-angle-double-right"
-          style={{ transform: "rotate(90deg)" ,fontSize:30 }}
+          style={{ transform: "rotate(90deg)", fontSize: 30 }}
         ></i>
       </button>
 
@@ -68,7 +69,11 @@ export default function Homeinfo() {
           <button id="cancel" onClick={toggleNewDiv}>
             <i
               className="fa fa-angle-double-right"
-              style={{ transform: "rotate(-90deg)",color:'white',fontSize:30 }}
+              style={{
+                transform: "rotate(-90deg)",
+                color: "white",
+                fontSize: 30,
+              }}
             ></i>
           </button>
         </div>

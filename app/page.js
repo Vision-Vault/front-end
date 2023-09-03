@@ -11,9 +11,6 @@ import Toprated from '@/components/toprated';
 export default function Home() {
   return (
     <>
-    <div className='bodyd'>
-
-
       <Hhead data="start page" />
       <Header />
 
@@ -23,7 +20,6 @@ export default function Home() {
       <Toprated />
       {/* <PostPage/> */}
       <Footer />
-      </div>
     </>
   );
 }
