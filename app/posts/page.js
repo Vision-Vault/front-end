@@ -6,7 +6,6 @@ export default async function PostPage() {
   });
   const posts = await response.json();
   //   console.log(posts);
-
   const postsJSX = posts.map((post) => {
     return (
       <div style={{ padding: "70px" }}>
@@ -16,7 +15,6 @@ export default async function PostPage() {
         <p>{post.body}</p>
         <p>{post.description}</p>
         {/* <img src={post.image.upload_to} alt="project image" />
-
         <video controls>
           <source src={`${post.video.upload_to}`} type="video/mp4" />
         </video>
@@ -32,7 +30,6 @@ export default async function PostPage() {
   return (
     <div>
       <h1>Posts </h1>
-
       {/* POSTS */}
       <div>{postsJSX}</div>
     </div>

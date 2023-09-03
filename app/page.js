@@ -8,10 +8,10 @@ import Hhead from '@/components/pagehead';
 export default function Home() {
   return (
     <>
-    <Hhead data='start page'/>
-    <Header/>
-    
-    <PostPage/>
+      <Hhead data='start page' />
+      <Header />
+
+      <PostPage />
 
       <Footer />
     </>
