@@ -74,7 +74,7 @@ nav {
   margin-top: -51%;
   margin-left: 740px;
   margin-bottom: 550px;
-  width: 590px;
+  width: 710px;
   height: 50px;
   background: hsla(197, 17%, 41%, 0);
   border-radius: 8px;
@@ -138,4 +138,12 @@ nav a:nth-child(5) {
 nav a:nth-child(5):hover ~ .animation {
   width: 120px;
   left: 470px;
+}
+
+nav a:nth-child(6) {
+  width: 120px;
+}
+nav a:nth-child(6):hover ~ .animation {
+  width: 120px;
+  left: 590px;
 }
